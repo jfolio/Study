@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* reset */
+* {margin:0; padding:0; color:#999;}
+a {text-decoration:none;}
+li {list-style:none;}
+.clearfix::before, .clearfix::after {display:block; content:''; clear:both;}
+
+/* layout */
+#wrap {width:960px; height:1180px; background:; margin:0 auto;}
+
+/* #header */
+#header {width:100%; height:130px;}
+
+#header .logo {float:left;}
+
+#header .menu_wrap {float:right; margin-top:32.5px; width:510px; height:65px; background:#f6ece4;}
+#header .menu_wrap .menu {}
+#header .menu_wrap .menu > li {position:relative; float:left; padding-top:22px; width:170px; text-align:center;}
+#header .menu_wrap .menu > li > a {color:#bb692d; font-weight:bold;}
+#header .menu_wrap .menu > li > a:hover {color:#7b422e;}
+#header .menu_wrap .menu > li .submenu {display:none; z-index:1; position:absolute; top:42px; left:0; float:left; margin-top:22px; height:150px; background:#bb692d;}
+#header .menu_wrap .menu > li .submenu > li {padding:14.5px 0; width:170px;}
+#header .menu_wrap .menu > li .submenu > li > a {color:#fff; font-weight:bold;}
+#header .menu_wrap .menu > li .submenu > li > a:hover {text-decoration:underline;}
+
+
+/* #banner */
+#banner {position:relative; overflow:hidden; width:100%; height:400px; background:#ccc;}
+
+#banner .slide_wrap {position:absolute; height:2000px;}
+#banner .slide_wrap > li {display:flex;}
+
+#banner .txt {position:absolute; top:35%; left:50%; transform:translateX(-50%); width:400px; height:100px; background:rgba(0,0,0,0.5);}
+#banner .txt p {padding:9px; text-align:center; color:#fff; font-size:24px;}
+
+/* #contents */
+#contents {position:relative; width:100%; height:500px;}
+#contents > div > h2 {margin:20px 0; font-size:22px; color:#bb692d; text-align:center;}
+
+#contents .cont1 {float:left; width:50%; height:280px;}
+#contents .cont1 .notice_wrap {margin:0 auto; width:423px;}
+#contents .cont1 .notice_wrap .notice > tr > th, td {padding:6px; font-size:14px;}
+#contents .cont1 .notice_wrap .notice .tr1,.tr3,.tr5 {background:#eee;}
+
+#contents .cont2 {float:right;width:50%; height:220px;}
+#contents .cont2 > .logo_wrap {margin:0 auto; width:240px;}
+
+#contents .cont3 {position:absolute; top:280px; width:100%; height:220px;}
+#contents .cont3 .icons li {float:left; padding:16px 0; width:320px; text-align:center;}
+#contents .cont3 .icons li img {width:125px;}
+#contents .cont3 .icons li h3 {margin:0 auto; padding-top:6px; width:150px; height:30px; font-size:18px; border-radius:18px; color:#fff; background:#bb692d;}
+
+
+/* #footer */
+#footer {width:100%; height:150px; background:#7b422e;}
+#footer > div {float:left; padding-top:30px;}
+#footer > div:nth-child(1) {width:50%;}
+#footer > div:nth-child(2) {width:50%;}
+#footer > div:nth-child(1) > p {padding-left:30px;}
+#footer > div > p {font-size:13px; color:#fff;}
