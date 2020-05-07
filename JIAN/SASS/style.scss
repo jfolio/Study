@@ -29,15 +29,24 @@ header {padding: 25px 0; width: 100%; background: #fff; border-bottom:1px solid 
 }
 
 /* main */
-main {position: relative; width: 100%; height: 700px; background: url(../img/img_main.png) no-repeat;
+main {position: relative; width: 100%;
   #intro, #about, #profile, #contact {
     .inner {margin: 0 auto; width: 1120px; text-align: center;}
   }
-  #intro {height: 100%;
-    .inner {height: 100%;
+  #intro {height: 700px; background: url(../img/img_main.png) no-repeat center;
+    .inner {position: relative; height: 100%;
       h2 {text-indent: -9999%;}
-      h3 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px;
+      h3 {animation: pst 1s ease-out, opc 1s ease-out; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px;
         strong {font-weight: 400;}
+      }
+      // animation
+      @keyframes pst {
+        0% {top: 60%;}
+        100% {top: 50%;}
+      }
+      @keyframes opc {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
       }
     }
   }
@@ -48,7 +57,7 @@ main {position: relative; width: 100%; height: 700px; background: url(../img/img
   }
   #about {
     .inner {@include clear;
-      > div {padding: 50px; background: rgba(241,234,228, 0.5);
+      > div {padding: 50px; background: rgba(241,234,228, 0.25);
         .tit {padding-bottom: 32.5px;
           div {height: 30px; padding-bottom: 10px;
             img {vertical-align: middle;}
@@ -160,7 +169,7 @@ main {position: relative; width: 100%; height: 700px; background: url(../img/img
   }
   #contact {
     .inner {padding-bottom: 100px;
-      .contact {padding: 50px; background: #fbf5e9;}
+      .contact {padding: 50px; background: rgba(251, 245, 233, 0.25);}
     }
   }
 }

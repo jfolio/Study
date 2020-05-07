@@ -23,17 +23,25 @@ header .inner nav ul li { float: left; padding: 0 25px; }
 header .inner nav ul li a { font-size: 18px; line-height: 50px; }
 
 /* main */
-main { position: relative; width: 100%; height: 700px; background: url(../img/img_main.png) no-repeat; }
+main { position: relative; width: 100%; }
 main #intro .inner, main #about .inner, main #profile .inner, main #contact .inner { margin: 0 auto; width: 1120px; text-align: center; }
-main #intro { height: 100%; }
-main #intro .inner { height: 100%; }
+main #intro { height: 700px; background: url(../img/img_main.png) no-repeat center; }
+main #intro .inner { position: relative; height: 100%; }
 main #intro .inner h2 { text-indent: -9999%; }
-main #intro .inner h3 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px; }
+main #intro .inner h3 { -webkit-animation: pst 1s ease-out, opc 1s ease-out; animation: pst 1s ease-out, opc 1s ease-out; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px; }
 main #intro .inner h3 strong { font-weight: 400; }
+@-webkit-keyframes pst { 0% { top: 60%; }
+  100% { top: 50%; } }
+@keyframes pst { 0% { top: 60%; }
+  100% { top: 50%; } }
+@-webkit-keyframes opc { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@keyframes opc { 0% { opacity: 0; }
+  100% { opacity: 1; } }
 main #about .inner, main #profile .inner, main #contact .inner { padding: 100px 0 0 0; }
 main #about .inner h2, main #profile .inner h2, main #contact .inner h2 { padding-bottom: 50px; font-size: 30px; font-weight: 400; text-align: center; }
 main #about .inner:after { display: block; content: ''; clear: both; }
-main #about .inner > div { padding: 50px; background: rgba(241, 234, 228, 0.5); }
+main #about .inner > div { padding: 50px; background: rgba(241, 234, 228, 0.25); }
 main #about .inner > div .tit { padding-bottom: 32.5px; }
 main #about .inner > div .tit div { height: 30px; padding-bottom: 10px; }
 main #about .inner > div .tit div img { vertical-align: middle; }
@@ -109,7 +117,7 @@ main #profile ul .dvc_plc_l .txt { float: right; }
 main #profile ul .dvc_plc_l .device { float: left; }
 main #profile ul .dvc_plc_l .device .screen { left: 15px; }
 main #contact .inner { padding-bottom: 100px; }
-main #contact .inner .contact { padding: 50px; background: #fbf5e9; }
+main #contact .inner .contact { padding: 50px; background: rgba(251, 245, 233, 0.25); }
 
 /* footer */
 footer { padding: 25px 0; width: 100%; background: #f9f9f9; text-align: center; }
