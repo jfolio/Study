@@ -1,0 +1,171 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {margin: 0; padding: 0; color: #666; font-family: 'Noto Sans KR', sans-serif;}
+h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0; line-height: 1;}
+ul {margin: 0; padding: 0;}
+a {text-decoration: none; color: #666;}
+li {list-style: none;}
+
+/* @ */
+@mixin clear {
+  &:after {display: block; content: ''; clear: both;}
+}
+
+/* header */
+header {padding: 25px 0; width: 100%; background: #fff; border-bottom:1px solid #eee;
+  .inner {@include clear; margin: 0 auto; width: 1120px;
+    > a {float: left; display: block; width: 50px; height: 50px; background: url(../img/logo.jpg) no-repeat center; background-size: 50px 50px;
+      h1 {text-indent: -9999%;}
+    }
+    nav {float: right;
+      ul {@include clear;
+        li {float: left; padding:0 25px;
+          a {font-size: 18px; line-height: 50px;}
+        }
+      }
+    }
+  }
+}
+
+/* main */
+main {position: relative; width: 100%; height: 700px; background: url(../img/img_main.png) no-repeat;
+  #intro, #about, #profile, #contact {
+    .inner {margin: 0 auto; width: 1120px; text-align: center;}
+  }
+  #intro {height: 100%;
+    .inner {height: 100%;
+      h2 {text-indent: -9999%;}
+      h3 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px;
+        strong {font-weight: 400;}
+      }
+    }
+  }
+  #about, #profile, #contact {
+    .inner {padding: 100px 0 0 0;
+      h2 {padding-bottom: 50px; font-size: 30px; font-weight: 400; text-align: center;}
+    }
+  }
+  #about {
+    .inner {@include clear;
+      > div {padding: 50px; background: rgba(241,234,228, 0.5);
+        .tit {padding-bottom: 32.5px;
+          div {height: 30px; padding-bottom: 10px;
+            img {vertical-align: middle;}
+          }
+          h3 {font-size: 25px; font-weight: 400;}
+        }
+        p {font-size: 18px; font-weight: 200; line-height: 35px;}
+      }
+      .profile, .certificates {float: left; width: 40.98214285714%; margin-bottom: 2px;}
+      .profile {border-right: 1px solid #fff;}
+      .certificates {border-left: 1px solid #fff;}
+      .skills {clear: both;
+        ul {padding: 0;
+          li {
+            p {padding: 0; font-weight: 300; line-height: 1;
+              span {font-weight: 200;}
+            }
+            .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px;
+              .progress {height: 100%; background: #d9c6b8; border-radius: 10px;}
+              .html {animation: progresshtml 2s ease-out; width: 75%;}
+              // animation
+              @keyframes progresshtml {
+                0% {width: 0%;}
+                100% {width: 75%;}
+              }
+              .css {animation: progresscss 2s ease-out; width: 75%;}
+              // animation
+              @keyframes progresscss {
+                0% {width: 0%;}
+                100% {width: 75%;}
+              }
+              .js {animation: progressjs 2s ease-out; width: 25%;}
+              // animation
+              @keyframes progressjs {
+                0% {width: 0%;}
+                100% {width: 25%;}
+              }
+              .jq {animation: progressjq 2s ease-out; width: 25%;}
+              // animation
+              @keyframes progressjq {
+                0% {width: 0%;}
+                100% {width: 25%;}
+              }
+              .adobe {animation: progressadobe 2s ease-out; width: 80%;}
+              // animation
+              @keyframes progressadobe {
+                0% {width: 0%;}
+                100% {width: 80%;}
+              }
+            }
+            .pgb5 {margin-bottom: 0;}
+          }
+        }
+      }
+    }
+  }
+  #profile {
+      ul {width: 100%;
+        li {@include clear; position: relative; padding: 100px; margin-top: 2px; background: #f9f9f9;
+          .txt {text-align: left;
+            .txt_tit {position: relative;
+              &:after {display: block; content: ''; margin: 25px 0; width:100%; height: 1px; background: #ccc;}
+                h3 {padding-bottom: 10px; font-size: 50px; font-weight: 400; color: #333;}
+                p {padding-bottom: 25px; font-size: 40px; font-weight: 200; color: #333;}
+                span {font-size: 18px; font-weight: 200; color: #666;}
+            }
+            .txt_cont {
+              p {padding-top:10px; font-weight: 200;}
+            }
+            a {position: absolute; bottom: 100px; display: block; width:100px; padding: 5px 10px; border: 1px solid rgba(199, 181, 145, .5); background: #fff; text-align: center;
+              span {font-size: 18px; font-weight: 200; color: #c7b591;}
+            }
+            a:hover {animation: bg 0.2s ease-out; background: #fbf5e9;
+              // animation
+              @keyframes bg {
+                0% {background: #fff;}
+                100% {background: #fbf5e9;}
+              }
+              span {animation: txtcolor 0.2s ease-out; color: #666;}
+              // animation
+              @keyframes txtcolor {
+                0% {color: #c7b591;}
+                100% {color: #666;}
+              }
+            }
+          }
+          .device {position: relative;
+            .screen {animation: screenon 1s ease-out; position: absolute; top: 15px;}
+            // animation
+            @keyframes screenon {
+              0% {opacity: 0;}
+              100% {opacity: 1;}
+            }
+          }
+        }
+        .dvc_plc_r {
+          .txt {float: left;}
+          .device {float: right;
+            .screen {right: 15px;}
+          }
+        }
+        .dvc_plc_l {
+          .txt {float: right;}
+          .device {float: left;
+            .screen {left: 15px;}
+          }
+        }
+      }
+  }
+  #contact {
+    .inner {padding-bottom: 100px;
+      .contact {padding: 50px; background: #fbf5e9;}
+    }
+  }
+}
+
+/* footer */
+footer {padding: 25px 0; width: 100%; background: #f9f9f9; text-align: center;
+  p {font-size: 13px; font-weight: 200; color: #666;}
+}
