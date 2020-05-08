@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 body {margin: 0; padding: 0; color: #666; font-family: 'Noto Sans KR', sans-serif;}
-h1, h2, h3, h4, h5, h6, p {margin: 0; padding: 0; line-height: 1;}
+h1, h2, h3, h4, h5, h6, p, textarea {margin: 0; padding: 0; line-height: 1;}
 ul {margin: 0; padding: 0;}
 a {text-decoration: none; color: #666;}
 li {list-style: none;}
@@ -30,34 +30,32 @@ header {padding: 25px 0; width: 100%; background: #fff; border-bottom:1px solid 
 
 /* main */
 main {position: relative; width: 100%;
-  #intro, #about, #profile, #contact {
-    .inner {margin: 0 auto; width: 1120px; text-align: center;}
-  }
-  #intro {height: 700px; background: url(../img/img_main.png) no-repeat center;
-    .inner {position: relative; height: 100%;
-      h2 {text-indent: -9999%;}
-      h3 {animation: pst 1s ease-out, opc 1s ease-out; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px;
-        strong {font-weight: 400;}
-      }
-      // animation
-      @keyframes pst {
-        0% {top: 60%;}
-        100% {top: 50%;}
-      }
-      @keyframes opc {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-      }
+  #intro {position: relative; height: 700px; text-align: center;
+    img {width:100%; min-width:320px; max-width:1920px;}
+    h2 {text-indent: -9999%;}
+    h3 {animation: pst 1s ease-out, opc 1s ease-out; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px;
+      strong {font-weight: 400;}
+    }
+    // animation
+    @keyframes pst {
+      0% {top: 60%;}
+      100% {top: 50%;}
+    }
+    @keyframes opc {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
     }
   }
-  #about, #profile, #contact {
-    .inner {padding: 100px 0 0 0;
-      h2 {padding-bottom: 50px; font-size: 30px; font-weight: 400; text-align: center;}
+  #about, #portfolio, #contact {
+    .inner {margin: 0 auto; padding: 100px 0 0 0; width: 1120px; text-align: center;
+      h2 {padding-bottom: 50px; font-size: 30px; font-weight: 400; text-align: center; color: #a3654e;
+      &::after {display: block; content: ''; margin: 0 auto; margin-top: 20px; width: 30px; height: 2px; background: #a3654e;}
+      }
     }
   }
   #about {
     .inner {@include clear;
-      > div {padding: 50px; background: rgba(241,234,228, 0.25);
+      > div {padding: 50px 0;
         .tit {padding-bottom: 32.5px;
           div {height: 30px; padding-bottom: 10px;
             img {vertical-align: middle;}
@@ -66,17 +64,15 @@ main {position: relative; width: 100%;
         }
         p {font-size: 18px; font-weight: 200; line-height: 35px;}
       }
-      .profile, .certificates {float: left; width: 40.98214285714%; margin-bottom: 2px;}
-      .profile {border-right: 1px solid #fff;}
-      .certificates {border-left: 1px solid #fff;}
+      .profile, .certificates {float: left; width: 50%; margin-bottom: 2px;}
       .skills {clear: both;
         ul {padding: 0;
-          li {
+          li {text-align: left;
             p {padding: 0; font-weight: 300; line-height: 1;
               span {font-weight: 200;}
             }
-            .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px;
-              .progress {height: 100%; background: #d9c6b8; border-radius: 10px;}
+            .progressbar {margin: 10px 0 20px 0; height: 20px; background: rgba(163,101,78,0.1); border-radius: 10px;
+              .progress {height: 100%; background: #a3654e; border-radius: 10px;}
               .html {animation: progresshtml 2s ease-out; width: 75%;}
               // animation
               @keyframes progresshtml {
@@ -114,9 +110,9 @@ main {position: relative; width: 100%;
       }
     }
   }
-  #profile {
+  #portfolio {
       ul {width: 100%;
-        li {@include clear; position: relative; padding: 100px; margin-top: 2px; background: #f9f9f9;
+        li {@include clear; position: relative; padding: 100px; margin-top: 2px;
           .txt {text-align: left;
             .txt_tit {position: relative;
               &:after {display: block; content: ''; margin: 25px 0; width:100%; height: 1px; background: #ccc;}
@@ -127,20 +123,14 @@ main {position: relative; width: 100%;
             .txt_cont {
               p {padding-top:10px; font-weight: 200;}
             }
-            a {position: absolute; bottom: 100px; display: block; width:100px; padding: 5px 10px; border: 1px solid rgba(199, 181, 145, .5); background: #fff; text-align: center;
-              span {font-size: 18px; font-weight: 200; color: #c7b591;}
+            a {position: absolute; bottom: 100px; display: block; width:100px; padding: 5px 10px; border: 1px solid rgba(163,101,78,0.5); background: #fff; text-align: center;
+              span {font-size: 18px; font-weight: 300; color: #a3654e;}
             }
-            a:hover {animation: bg 0.2s ease-out; background: #fbf5e9;
+            a:hover {animation: bg 0.2s ease-out; background: rgba(163,101,78,0.1);
               // animation
               @keyframes bg {
                 0% {background: #fff;}
-                100% {background: #fbf5e9;}
-              }
-              span {animation: txtcolor 0.2s ease-out; color: #666;}
-              // animation
-              @keyframes txtcolor {
-                0% {color: #c7b591;}
-                100% {color: #666;}
+                100% {background: rgba(163,101,78,0.1);}
               }
             }
           }
@@ -167,14 +157,22 @@ main {position: relative; width: 100%;
         }
       }
   }
-  #contact {
+  #contact {background: rgba(163,101,78,0.05);
     .inner {padding-bottom: 100px;
-      .contact {padding: 50px; background: rgba(251, 245, 233, 0.25);}
+      .contact {padding: 50px;
+            ul{margin: 0 auto; width:50%; border: 1px solid #555;
+              li{font-size: 13px;
+                label {text-indent: 13px;
+                  input, textarea {border: 1px solid #ccc;}
+                }
+              }
+            }
+      }
     }
   }
 }
 
 /* footer */
-footer {padding: 25px 0; width: 100%; background: #f9f9f9; text-align: center;
+footer {padding: 25px 0; width: 100%; text-align: center;
   p {font-size: 13px; font-weight: 200; color: #666;}
 }

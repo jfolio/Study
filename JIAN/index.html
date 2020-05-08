@@ -10,7 +10,7 @@
   <header>
     <div class="inner">
       <a href="#a"><h1>logo</h1></a>
-      <nav class="lnb">
+      <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#profile">Profile</a></li>
@@ -22,6 +22,7 @@
 
   <main>
     <section id="intro">
+      <img src="img/img_main.png" alt="">
       <div class="inner">
         <h2>Intro</h2>
         <h3>안녕하세요,<br>신입 퍼블리셔 <strong>김지안</strong>입니다.</h3>
@@ -60,7 +61,7 @@
           </div>
           <ul>
             <li>
-              <p>HTML <span>(75%)</span></p>
+              <p>HTML5 <span>(75%)</span></p>
               <div class="progressbar"><div class="progress html"></div></div>
             </li>
             <li>
@@ -84,7 +85,7 @@
       </div>
     </section>
 
-    <section id="profile">
+    <section id="portfolio">
       <div class="inner">
         <h2>Portfolio</h2>
         <ul>
@@ -105,8 +106,10 @@
               </a>
             </div>
             <div class="device">
-              <img class="device" src="img/img_devices_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
-              <img class="screen" src="img/img_screen_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              <a href="#a">
+                <img class="device" src="img/img_devices_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+                <img class="screen" src="img/img_screen_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              </a>
             </div>
           </li>
           <li class="dvc_plc_l">
@@ -126,8 +129,10 @@
               </a>
             </div>
             <div class="device">
-              <img class="device" src="img/img_devices_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
-              <img class="screen" src="img/img_screen_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              <a href="#a">
+                <img class="device" src="img/img_devices_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+                <img class="screen" src="img/img_screen_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              </a>
             </div>
           </li>
           <li class="dvc_plc_r">
@@ -147,8 +152,10 @@
               </a>
             </div>
             <div class="device">
-              <img class="device" src="img/img_devices_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
-              <img class="screen" src="img/img_screen_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              <a href="#a">
+                <img class="device" src="img/img_devices_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+                <img class="screen" src="img/img_screen_r.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              </a>
             </div>
           </li>
           <li class="dvc_plc_l">
@@ -168,8 +175,10 @@
               </a>
             </div>
             <div class="device">
-              <img class="device" src="img/img_devices_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
-              <img class="screen" src="img/img_screen_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              <a href="#a">
+                <img class="device" src="img/img_devices_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+                <img class="screen" src="img/img_screen_l.png" alt="포트폴리오 사이트를 PC, 태블릿, 모바일 화면에 적용">
+              </a>
             </div>
           </li>
         </ul>
@@ -181,20 +190,28 @@
         <h2>Contact</h2>
         <div class="contact">
           <form action="" method="">
-            <label id="name">Name
-              <input for="name" type="text" name="name">
-            </label>
-            <label id="email">e-mail
-              <input for="email" type="email" name="email">
-            </label><br>
-            <label id="phone">Phone
-              <input for="phone" type="text" name="phone">-
-              <input for="phone" type="text" name="phone">-
-              <input for="phone" type="text" name="phone">
-            </label><br>
-            <label id="message">Message
-              <textarea for="message" name="message" rows="8" cols="80"></textarea>
-            </label>
+            <ul>
+              <li>
+                <label for="name">
+                  <input id="name" type="text" placeholder="이름" title="name">
+                </label>
+              </li>
+              <li>
+                <label for="email">
+                  <input id="email" type="text" placeholder="이메일" title="email">
+                </label>
+              </li>
+              <li>
+                <label for="tel">
+                  <input id="tel" type="tel" placeholder="010-0000-0000" name="tel">
+                </label>
+              </li>
+              <li>
+                <label for="message">
+                  <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                </label>
+              </li>
+            </ul>
           </form>
         </div>
       </div>
