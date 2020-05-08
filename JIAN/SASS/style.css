@@ -25,7 +25,7 @@ header .inner nav ul li a { font-size: 18px; line-height: 50px; }
 /* main */
 main { position: relative; width: 100%; }
 main #intro { position: relative; text-align: center; }
-main #intro img { width: 100%; min-width: 320px; max-width: 1920px; }
+main #intro img { width: 100%; max-width: 1920px; }
 main #intro h2 { text-indent: -9999%; }
 main #intro h3 { -webkit-animation: pst 1s ease-out, opc 1s ease-out; animation: pst 1s ease-out, opc 1s ease-out; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-size: 40px; font-weight: 300; line-height: 55px; }
 main #intro h3 strong { font-weight: 400; }
