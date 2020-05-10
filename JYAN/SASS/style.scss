@@ -59,7 +59,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
 .side, #contents {top: 0; left: 0;}
 
 /* .side */
-.side {position: fixed; width: 18.75%; height: 100%; background: #fff; box-shadow: 25px 0 25px rgba(204, 204, 204, 0.5);}
+.side {position: fixed; width: 18.75%; height: 100%; background: #fff; box-shadow: 10px 0 25px rgba(204, 204, 204, .25);}
 
 
 
@@ -139,35 +139,35 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
                 p {padding: 0; font-weight: 300; line-height: 1;
                   span {font-weight: 200;}
                 }
-                .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px;
-                  .progress {height: 100%; background: #f2c8c4; border-radius: 10px;}
-                  .html {animation: progresshtml 2s ease-out; width: 75%;}
+                .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
+                  div {height: 100%; background: #f2c8c4; border-radius: 10px;}
+                  .skill1 {animation: progress1 2s ease-out; width: 75%;}
                   // animation
-                  @keyframes progresshtml {
+                  @keyframes progress1 {
                     0% {width: 0%;}
                     100% {width: 75%;}
                   }
-                  .css {animation: progresscss 2s ease-out; width: 75%;}
+                  .skill2 {animation: progress2 2s ease-out; width: 75%;}
                   // animation
-                  @keyframes progresscss {
+                  @keyframes progress2 {
                     0% {width: 0%;}
                     100% {width: 75%;}
                   }
-                  .js {animation: progressjs 2s ease-out; width: 25%;}
+                  .skill3 {animation: progress3 2s ease-out; width: 25%;}
                   // animation
-                  @keyframes progressjs {
+                  @keyframes progress3 {
                     0% {width: 0%;}
                     100% {width: 25%;}
                   }
-                  .jq {animation: progressjq 2s ease-out; width: 25%;}
+                  .skill4 {animation: progress4 2s ease-out; width: 25%;}
                   // animation
-                  @keyframes progressjq {
+                  @keyframes progress4 {
                     0% {width: 0%;}
                     100% {width: 25%;}
                   }
-                  .adobe {animation: progressadobe 2s ease-out; width: 80%;}
+                  .skill5 {animation: progress5 2s ease-out; width: 80%;}
                   // animation
-                  @keyframes progressadobe {
+                  @keyframes progress5 {
                     0% {width: 0%;}
                     100% {width: 80%;}
                   }
@@ -202,7 +202,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
               &:nth-of-type(3) {margin-top: 20px; width: 100%;
               }
               label {text-indent: 10px;
-                input, textarea {border: none; border-radius: 15px; box-shadow: 5px 5px 10px rgba(245, 245, 245, .5);
+                input, textarea {border: none; border-radius: 15px; box-shadow: 0 0 10px rgba(240, 240, 240, 1);
                   &::placeholder {color: #999; text-indent: 10px;}
                 }
                 input {width: 485px; height: 30px;}
@@ -217,7 +217,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* footer */
-  footer {padding: 25px 0; width: 100%; text-align: center; background: #fff; box-shadow: -25px 0 25px rgba(204, 204, 204, 0.5);
+  footer {padding: 25px 0; width: 100%; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
     p {font-size: 13px; font-weight: 200; color: #666;}
   }
 }
