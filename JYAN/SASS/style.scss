@@ -25,18 +25,18 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
 /* #header */
 #header {width: 18.75%;
   nav {z-index: 10; display: none; position: fixed; left: 0; width: 100%; height: 100%; background: #fff;
-    ul {@include transform50; text-align: center;
-      li {padding: 25px 0;
+    ul {@include transform50; width: 12.91%; text-align: center;
+      li {padding: 10% 0;
         a {z-index: 11; display: inline-block; position: relative; font-size: 2.0833vw; font-weight: 400;}
-        span {transition: all 0.2s; position: absolute; width: 40px; height: 40px; border-radius: 20px; background: rgba(242, 96, 82, 0);}
+        span {transition: all 0.2s; position: absolute; width: 16.12%; padding-bottom: 16.12%; border-radius: 20px; background: rgba(242, 96, 82, 0);}
         &:nth-of-type(1) {
-          span {left: -10px;}
+          span {left: -4.03%;}
         }
         &:nth-of-type(2) {
-          span {left: 37px;}
+          span {left: 14.91%;}
         }
         &:nth-of-type(3) {
-          span {left: 10px;}
+          span {left: 4.03%;}
         }
         &:hover {
           span {background: rgba(242, 96, 82, .25);}
@@ -44,11 +44,11 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
       }
     }
   }
-  .menu-icon {padding: 100px 0; height: 420px;
-    div {margin: 0 auto; width: 44.44%;
-      .menu-ani {z-index: 20; display: block; position: relative; width: 25px; height: 25px;
-        span {display: block; position: absolute; top: 50%; transform: translateY(-50%); transition: all 0.5s; height: 3px; border-radius: 3px; background: rgba(37, 20, 26, 1); color: transparent;
-          &::before, &::after {content: ''; position: absolute; left: 0; transition: all 0.5s; width: 100%; height: 3px; background: rgba(37, 20, 26, 1);}
+  .menu-icon {padding: 27.77% 0; height: 420px;
+    div {margin: 0 auto; width: 60%;
+      .menu-ani {z-index: 20; display: block; position: relative; padding-bottom: 12.5%; width: 12.5%;
+        span {display: block; position: absolute; top: 50%; transform: translateY(-50%); transition: all 0.5s; width: 100%; height: 15%; border-radius: 5px; background: rgba(37, 20, 26, 1); color: transparent;
+          &::before, &::after {content: ''; position: absolute; left: 0; transition: all 0.5s; width: 100%; height: 100%; border-radius: 5px; background: rgba(37, 20, 26, 1);}
           &::before {top: -9px;}
           &::after {top: 9px;}
         }
@@ -66,11 +66,11 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
 /* side-r */
 #contents {width: 100%;
   /* .shortcut */
-  .shortcut {z-index: 1; position: fixed; top: 100px; right: 100px; width: 5.2%;
-      li {padding-top: 10px; text-align: right;
+  .shortcut {z-index: 1; position: fixed; top: 100px; right: 2.6%; width: 5.625%;
+      li {padding-top: 9.25%; width: 100%; text-align: right;
         &:first-child {padding: 0;}
-        a {display: inline-block; height: 100%; font-size: 0.7813vw; font-weight: 400;
-          &::after {display: inline-block; content: ''; margin-left: 10px; width: 15px; height: 15px; border-radius: 15px; background: #ddd; transition: all 0.2s;}
+        a {display: inline-block; width: 100%; height: 100%; font-size: 0.7813vw; font-weight: 400;
+          &::after {display: inline-block; content: ''; margin-left: 10px; padding-bottom: 12.96%; width: 12.96%; border-radius: 15px; background: #ddd; transition: all 0.2s;}
         }
         a:hover {
           &::after {background: #f26052;}
@@ -79,7 +79,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* #intro, #about, #contact */
-  #intro, #about, #contact {@include clear; position: relative; padding: 100px 0;
+  #intro, #about, #contact {@include clear; position: relative; padding: 5.2% 0;
     .cont {position: relative; width: 81.25%;
       .wrap {width: 80%;}
     }
@@ -96,11 +96,11 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   #intro header, #intro .cont, #about .sec-tit, #about .cont, #contact .sec-tit, #contact .cont {float: left; height: 100%;}
 
   /* intro */
-  #intro {height: 420px;
+  #intro {position: relative; height: 21.87%;
     header {
-      ul {margin: 0 auto; width: 44.44%;
-        li {padding-top: 28px; text-align: center;
-          &:nth-of-type(1) {padding-top: 53px;}
+      ul {margin: 0 auto; width: 60%;
+        li {padding-top: 11.57%; text-align: center;
+          &:nth-of-type(1) {padding-top: 25.46%;}
           .main-tit, .main-img {display: block;}
           .main-tit {
             h1 {font-size: 1.5625vw; font-weight: 400; line-height: 2.0833vw;}
@@ -114,13 +114,13 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
         }
       }
     }
-    .cont {
+    .cont {position: absolute; top: 0; right: 0;
       .wrap {@include transform50; text-align: center;
-        h2 {padding-bottom: 100px; font-size: 3.9063vw; font-weight: 200; line-height: 4.6875vw;
+        h2 {padding-bottom: 8.92%; font-size: 3.9063vw; font-weight: 200; line-height: 4.6875vw;
           strong {font-weight: 400;}
         }
-        .mouse {position: relative; margin: 0 auto; width :30px; height: 50px; box-sizing: border-box; border: 2px solid #666; border-radius: 15px;
-           .scroller {position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 8px; background-color: #f26052; animation-name: scroll; animation-duration: 1.2s; animation-timing-function: ease-out; animation-iteration-count: infinite;}
+        .mouse {position: relative; margin: 0 auto; padding-bottom: 4.46%; width: 2.67%; box-sizing: border-box; border: 2px solid #666; border-radius: 15px;
+           .scroller {position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); padding-bottom: 26.66%; width: 26.66%; border-radius: 8px; background-color: #f26052; animation-name: scroll; animation-duration: 1.2s; animation-timing-function: ease-out; animation-iteration-count: infinite;}
            // animation
            @keyframes scroll {
              0% {top: 25%;}
@@ -132,15 +132,15 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* about */
-  #about {height: 955px;
+  #about {height: 49.73%;
     .cont {
       .wrap {
         > ul {@include clear;
           > li {float: left; padding: 50px 0; background: rgba(242, 200, 196, .25);
             > div {margin: 0 auto; width: 81.48%;
               .tit {padding-bottom: 32.5px;
-                div {height: 30px; padding-bottom: 10px;
-                  img {vertical-align: middle;}
+                div {height: 6.81%; padding-bottom: 10px;
+                  img {width: 8.5%; vertical-align: middle;}
                 }
                 h3 {font-size: 1.3021vw; font-weight: 400;}
               }
@@ -151,13 +151,18 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
           .certificates {float: right;}
           .skills {clear: both; margin-top: 40px; width: 100%;
             > div {width: 91.07%;
+              .tit {
+                div {
+                  img {width: 2.67%;}
+                }
+              }
               ul {padding: 0;
                 li {text-align: left;
                   p {padding: 0; font-weight: 300; line-height: 1;
                     span {font-weight: 200;}
                   }
-                  .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
-                    div {height: 100%; background: #f2c8c4; border-radius: 10px;}
+                  .progressbar {margin: 0.98% 0 1.96% 0; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
+                    div {padding-bottom: 2%; background: #f2c8c4; border-radius: 10px;}
                     .prg1, .skill1 {width: 75%;}
                     .skill1 {animation: progress1 2s ease-out;}
                     // animation
@@ -204,7 +209,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* contact */
-  #contact {height: 435px;
+  #contact {height: 22.65%;
     .cont {
       .wrap {
         > div {padding: 50px; background: rgba(242, 242, 242, .5);
@@ -218,7 +223,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
             li {float: left;
               &:nth-of-type(1), &:nth-of-type(2) {width: 47.54%;}
               &:nth-of-type(2) {float: right}
-              &:nth-of-type(3) {margin-top: 20px; width: 100%;
+              &:nth-of-type(3) {margin-top: 1.96%; width: 100%;
               }
               label {text-indent: 10px;
                 input, textarea {width: 100%; border: none; border-radius: 15px; box-shadow: 0 0 10px rgba(240, 240, 240, 1);
@@ -236,7 +241,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* footer */
-  footer {padding: 25px 0; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
+  footer {padding: 1.3% 0; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
     p {font-size: 0.6771vw; font-weight: 200; color: #666;}
   }
 }
