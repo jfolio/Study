@@ -1,4 +1,5 @@
 /* reset */
+html {font-size: 10px;}
 html, body {width: 100%; height: 100%}
 body, header, nav, section, footer, h1, h2, h3, h4, h5, h6, p, span, div, ul, li, img, label, input, textarea {margin: 0; padding: 0; line-height: 1;}
 a {text-decoration: none; color: inherit;}
@@ -11,16 +12,22 @@ li {list-style: none;}
 }
 @mixin transform50 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
-/* layout */
+/* PC layout */
 body {position: relative; background: url(../img/bg_grid.png); font-family: 'Noto Sans KR', sans-serif; color: #666;}
-.scl {overflow: hidden;}
+.scroll {overflow: hidden;}
+
+/* .side */
+.side {position: fixed; top: 0; left: 0; width: 18.75%; height: 100%; background: #fff; box-shadow: 10px 0 25px rgba(204, 204, 204, .25);}
+
+/* #header, #contents */
+#header, #contents {position: absolute; top: 0; left: 0;}
 
 /* #header */
-#header {position: absolute; top: 0; left: 0; width: 18.75%; height: 100%;
-  nav {position: fixed; z-index: 10; display: none; position: fixed; left: 0; width: 100%; height: 100%; background: #fff;
+#header {width: 18.75%;
+  nav {z-index: 10; display: none; position: fixed; left: 0; width: 100%; height: 100%; background: #fff;
     ul {@include transform50; text-align: center;
       li {padding: 25px 0;
-        a {z-index: 11; display: inline-block; position: relative; font-size: 40px; font-weight: 400;}
+        a {z-index: 11; display: inline-block; position: relative; font-size: 2.0833vw; font-weight: 400;}
         span {transition: all 0.2s; position: absolute; width: 40px; height: 40px; border-radius: 20px; background: rgba(242, 96, 82, 0);}
         &:nth-of-type(1) {
           span {left: -10px;}
@@ -37,8 +44,8 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
       }
     }
   }
-  .menu-icon {width: 100%; padding: 100px 0; height: 420px;
-    div {margin: 0 auto; width: 160px;
+  .menu-icon {padding: 100px 0; height: 420px;
+    div {margin: 0 auto; width: 44.44%;
       .menu-ani {z-index: 20; display: block; position: relative; width: 25px; height: 25px;
         span {display: block; position: absolute; top: 50%; transform: translateY(-50%); transition: all 0.5s; height: 3px; border-radius: 3px; background: rgba(37, 20, 26, 1); color: transparent;
           &::before, &::after {content: ''; position: absolute; left: 0; transition: all 0.5s; width: 100%; height: 3px; background: rgba(37, 20, 26, 1);}
@@ -56,48 +63,60 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 }
 
-.side, #contents {top: 0; left: 0;}
-
-/* .side */
-.side {position: fixed; width: 18.75%; height: 100%; background: #fff; box-shadow: 10px 0 25px rgba(204, 204, 204, .25);}
-
-
-
 /* side-r */
-#contents {position: absolute; width: 100%; height: 100%;
+#contents {width: 100%;
   /* .shortcut */
-  .shortcut {z-index: 1; position: fixed; top: 100px; right: 100px; width: 100px;
-    li {padding-top: 10px; text-align: right;
-      &:first-child {padding: 0;}
-      a {display: inline-block; height: 100%; font-size: 15px; font-weight: 400;
-        &::after {display: inline-block; content: ''; margin-left: 10px; width: 15px; height: 15px; border-radius: 15px; background: #ddd; transition: all 0.2s;}
+  .shortcut {z-index: 1; position: fixed; top: 100px; right: 100px; width: 5.2%;
+      li {padding-top: 10px; text-align: right;
+        &:first-child {padding: 0;}
+        a {display: inline-block; height: 100%; font-size: 0.7813vw; font-weight: 400;
+          &::after {display: inline-block; content: ''; margin-left: 10px; width: 15px; height: 15px; border-radius: 15px; background: #ddd; transition: all 0.2s;}
+        }
+        a:hover {
+          &::after {background: #f26052;}
+        }
       }
-      a:hover {
-        &::after {background: #f26052;}
-      }
-    }
   }
 
+  /* #intro, #about, #contact */
+  #intro, #about, #contact {@include clear; position: relative; padding: 100px 0;
+    .cont {position: relative; width: 81.25%;
+      .wrap {width: 80%;}
+    }
+  }
+  #about, #contact {
+    .sec-tit {text-align: center;
+      h2 {margin: 0 auto; font-size: 1.5625vw; font-weight: 400; color: #f26052;}
+    }
+    .cont {
+      .wrap {margin: 0 auto;}
+    }
+  }
+  #intro header, #about .sec-tit, #contact .sec-tit {width: 18.75%}
+  #intro header, #intro .cont, #about .sec-tit, #about .cont, #contact .sec-tit, #contact .cont {float: left; height: 100%;}
+
   /* intro */
-  #intro {@include clear; position: relative; padding: 100px 0; height: 420px;
-    header, .cont {float: left; height: 100%;}
-    header{width: 18.75%;
-      ul {margin: 0 auto; width: 160px;
-        li {padding-top: 28px;
+  #intro {height: 420px;
+    header {
+      ul {margin: 0 auto; width: 44.44%;
+        li {padding-top: 28px; text-align: center;
           &:nth-of-type(1) {padding-top: 53px;}
-          .main-tit {display: block;
-            h1 {font-size: 30px; font-weight: 400; line-height: 40px;}
+          .main-tit, .main-img {display: block;}
+          .main-tit {
+            h1 {font-size: 1.5625vw; font-weight: 400; line-height: 2.0833vw;}
           }
-          .main-img {display: block; height: 160px;}
-          p {font-size: 14px; font-weight: 300; line-height: 25px;
+          .main-img {
+            img {width: 100%;}
+          }
+          p {font-size: 0.7292vw; font-weight: 300; line-height: 1.3021vw;
             strong {font-weight: 500;}
           }
         }
       }
     }
-    .cont {position: relative; width: 81.25%;
-      .wrap {@include transform50; width: 1120px; text-align: center;
-        h2 {padding-bottom: 100px; width: 100%; font-size: 75px; font-weight: 200; line-height: 90px;
+    .cont {
+      .wrap {@include transform50; text-align: center;
+        h2 {padding-bottom: 100px; font-size: 3.9063vw; font-weight: 200; line-height: 4.6875vw;
           strong {font-weight: 400;}
         }
         .mouse {position: relative; margin: 0 auto; width :30px; height: 50px; box-sizing: border-box; border: 2px solid #666; border-radius: 15px;
@@ -113,66 +132,69 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* about */
-  #about {@include clear; position: relative; padding: 100px 0; height: 955px;
-    .sec-tit, .cont {float: left; height: 100%;}
-    .sec-tit {width: 18.75%;
-      h2 {margin: 0 auto; width: 160px; font-size: 30px; font-weight: 400; color: #f26052;}
-    }
-    .cont {position: relative; width: 81.25%;
-      .wrap {margin: 0 auto; width: 1120px;
+  #about {height: 955px;
+    .cont {
+      .wrap {
         > ul {@include clear;
-          > li {float: left; padding: 50px; background: rgba(242, 200, 196, .25);
-            &:nth-of-type(1), &:nth-of-type(2) {width: 440px;}
-            &:nth-of-type(2) {float: right;}
-            &:nth-of-type(3) {margin-top: 40px; width: 1020px;}
-            .tit {padding-bottom: 32.5px; width: 100%;
-              div {height: 30px; padding-bottom: 10px;
-                img {vertical-align: middle;}
+          > li {float: left; padding: 50px 0; background: rgba(242, 200, 196, .25);
+            > div {margin: 0 auto; width: 81.48%;
+              .tit {padding-bottom: 32.5px;
+                div {height: 30px; padding-bottom: 10px;
+                  img {vertical-align: middle;}
+                }
+                h3 {font-size: 1.3021vw; font-weight: 400;}
               }
-              h3 {font-size: 25px; font-weight: 400;}
+              p {font-size: 0.9375vw; font-weight: 200; line-height: 1.8229vw;}
             }
-            p {font-size: 18px; font-weight: 200; line-height: 35px;}
           }
-          .skills {clear: both;
-            ul {padding: 0;
-              li {text-align: left;
-                p {padding: 0; font-weight: 300; line-height: 1;
-                  span {font-weight: 200;}
+          .profile, .certificates {width: 48.21%;}
+          .certificates {float: right;}
+          .skills {clear: both; margin-top: 40px; width: 100%;
+            > div {width: 91.07%;
+              ul {padding: 0;
+                li {text-align: left;
+                  p {padding: 0; font-weight: 300; line-height: 1;
+                    span {font-weight: 200;}
+                  }
+                  .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
+                    div {height: 100%; background: #f2c8c4; border-radius: 10px;}
+                    .prg1, .skill1 {width: 75%;}
+                    .skill1 {animation: progress1 2s ease-out;}
+                    // animation
+                    @keyframes progress1 {
+                      0% {width: 0%;}
+                      100% {width: 75%;}
+                    }
+                    .prg2, .skill2 {width: 75%;}
+                    .skill2 {animation: progress2 2s ease-out;}
+                    // animation
+                    @keyframes progress2 {
+                      0% {width: 0%;}
+                      100% {width: 75%;}
+                    }
+                    .prg3, .skill3 {width: 25%;}
+                    .skill3 {animation: progress3 2s ease-out;}
+                    // animation
+                    @keyframes progress3 {
+                      0% {width: 0%;}
+                      100% {width: 25%;}
+                    }
+                    .prg4, .skill4 {width: 25%;}
+                    .skill4 {animation: progress4 2s ease-out;}
+                    // animation
+                    @keyframes progress4 {
+                      0% {width: 0%;}
+                      100% {width: 25%;}
+                    }
+                    .prg5, .skill5 {width: 80%;}
+                    .skill5 {animation: progress5 2s ease-out; margin-bottom: 0;}
+                    // animation
+                    @keyframes progress5 {
+                      0% {width: 0%;}
+                      100% {width: 80%;}
+                    }
+                  }
                 }
-                .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
-                  div {height: 100%; background: #f2c8c4; border-radius: 10px;}
-                  .skill1 {animation: progress1 2s ease-out; width: 75%;}
-                  // animation
-                  @keyframes progress1 {
-                    0% {width: 0%;}
-                    100% {width: 75%;}
-                  }
-                  .skill2 {animation: progress2 2s ease-out; width: 75%;}
-                  // animation
-                  @keyframes progress2 {
-                    0% {width: 0%;}
-                    100% {width: 75%;}
-                  }
-                  .skill3 {animation: progress3 2s ease-out; width: 25%;}
-                  // animation
-                  @keyframes progress3 {
-                    0% {width: 0%;}
-                    100% {width: 25%;}
-                  }
-                  .skill4 {animation: progress4 2s ease-out; width: 25%;}
-                  // animation
-                  @keyframes progress4 {
-                    0% {width: 0%;}
-                    100% {width: 25%;}
-                  }
-                  .skill5 {animation: progress5 2s ease-out; width: 80%;}
-                  // animation
-                  @keyframes progress5 {
-                    0% {width: 0%;}
-                    100% {width: 80%;}
-                  }
-                }
-                .pgb5 {margin-bottom: 0;}
               }
             }
           }
@@ -182,31 +204,28 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* contact */
-  #contact {@include clear; position: relative; padding: 100px 0; height: 435px;
-    .sec-tit, .cont {float: left; height: 100%;}
-    .sec-tit {width: 18.75%;
-      h2 {margin: 0 auto; width: 160px; font-size: 30px; font-weight: 400; color: #f26052;}
-    }
-    .cont {position: relative; width: 81.25%;
-      .wrap {margin: 0 auto; width: 1120px;
+  #contact {height: 435px;
+    .cont {
+      .wrap {
         > div {padding: 50px; background: rgba(242, 242, 242, .5);
-          .tit {padding-bottom: 32.5px; width: 100%;
+          .tit {padding-bottom: 32.5px;
             div {height: 30px; padding-bottom: 10px;
               img {vertical-align: middle;}
             }
-            h3 {font-size: 25px; font-weight: 400;}
+            h3 {font-size: 1.3021vw; font-weight: 400;}
           }
-          ul {@include clear; width: 100%;
+          ul {@include clear;
             li {float: left;
+              &:nth-of-type(1), &:nth-of-type(2) {width: 47.54%;}
               &:nth-of-type(2) {float: right}
               &:nth-of-type(3) {margin-top: 20px; width: 100%;
               }
               label {text-indent: 10px;
-                input, textarea {border: none; border-radius: 15px; box-shadow: 0 0 10px rgba(240, 240, 240, 1);
+                input, textarea {width: 100%; border: none; border-radius: 15px; box-shadow: 0 0 10px rgba(240, 240, 240, 1);
                   &::placeholder {color: #999; text-indent: 10px;}
                 }
-                input {width: 485px; height: 30px;}
-                textarea {width: 100%; height: 200px; resize: none;
+                input {height: 30px;}
+                textarea {height: 200px; resize: none;
                 }
               }
             }
@@ -217,7 +236,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
   }
 
   /* footer */
-  footer {padding: 25px 0; width: 100%; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
-    p {font-size: 13px; font-weight: 200; color: #666;}
+  footer {padding: 25px 0; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
+    p {font-size: 0.6771vw; font-weight: 200; color: #666;}
   }
 }

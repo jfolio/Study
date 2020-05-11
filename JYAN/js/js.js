@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('.menu-ani').click(function(){
 		$(this).toggleClass('on');
 		$('nav').stop().slideToggle(300);
-		$('body').toggleClass('scl');
+		$('body').toggleClass('scroll');
 	});
 
 	$('nav').on('scroll touchmove mousewheel', function(e){
@@ -30,11 +30,11 @@ $(document).ready(function(){
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             /* 3 */
             if( bottom_of_window > bottom_of_object/1 ){
-							$('.pgb1 div').addClass('.skill1');
-							$('.pgb2 div').addClass('.skill2');
-							$('.pgb3 div').addClass('.skill3');
-							$('.pgb4 div').addClass('.skill4');
-              $('.pgb5 div').addClass('.skill5');
+							$('.pgb1 div').addClass('skill1');
+							$('.pgb2 div').addClass('skill2');
+							$('.pgb3 div').addClass('skill3');
+							$('.pgb4 div').addClass('skill4');
+							$('.pgb5 div').addClass('skill5');
             }
         });
     });

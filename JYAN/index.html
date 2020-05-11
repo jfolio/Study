@@ -2,8 +2,12 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
   <title>JYAN</title>
   <link rel="stylesheet" href="SASS/style.css">
+  <link rel="stylesheet" href="SASS/tablet.css" media="all and (min-width:769px) and (max-width:1024px)">
+  <link rel="stylesheet" href="SASS/mobile.css" media="all and (min-width:320px) and (max-width:768px)">
   <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
   <script type="text/javascript" src="js/js.js"></script>
 </head>
@@ -64,56 +68,62 @@
         <div class="wrap">
           <ul>
             <li class="profile">
-              <div class="tit">
-                <div><img src="img/icon_profile.png" alt="프로필"></div>
-                <h3>Profile</h3>
+              <div class="pf-wrap">
+                <div class="tit">
+                  <div><img src="img/icon_profile.png" alt="프로필"></div>
+                  <h3>Profile</h3>
+                </div>
+                <p>김지안
+                  <br>1994. 08. 23
+                  <br>경기도 수원시
+                  <br>010 - 4067 - 0833
+                  <br>jeeann_@naver.com
+                </p>
               </div>
-              <p>김지안
-                <br>1994. 08. 23
-                <br>경기도 수원시
-                <br>010 - 4067 - 0833
-                <br>jeeann_@naver.com
-              </p>
             </li>
             <li class="certificates">
-              <div class="tit">
-                <div><img src="img/icon_certificates.png" alt="자격증"></div>
-                <h3>Certificates</h3>
+              <div class="cf-wrap">
+                <div class="tit">
+                  <div><img src="img/icon_certificates.png" alt="자격증"></div>
+                  <h3>Certificates</h3>
+                </div>
+                <p>웹디자인기능사
+                  <br>컴퓨터그래픽스운용기능사
+                  <br>GTQ Photoshop/Illustration 1급
+                  <br>워드프로세서 1급
+                  <br>MOS Master 2010
+                </p>
               </div>
-              <p>웹디자인기능사
-                <br>컴퓨터그래픽스운용기능사
-                <br>GTQ Photoshop/Illustration 1급
-                <br>워드프로세서 1급
-                <br>MOS Master 2010
-              </p>
             </li>
             <li class="skills">
-              <div class="tit">
-                <div><img src="img/icon_skills.png" alt="기술"></div>
-                <h3>Skills</h3>
+              <div class="sk-wrap">
+                <div class="tit">
+                  <div><img src="img/icon_skills.png" alt="기술"></div>
+                  <h3>Skills</h3>
+                </div>
+                <ul>
+                  <li>
+                    <p>HTML5 <span>(75%)</span></p>
+                    <div class="progressbar pgb1"><div class="prg1"></div></div>
+                  </li>
+                  <li>
+                    <p>CSS <span>(75%)</span></p>
+                    <div class="progressbar pgb2"><div class="prg2"></div></div>
+                  </li>
+                  <li>
+                    <p>JavaScript <span>(25%)</span></p>
+                    <div class="progressbar pgb3"><div class="prg3"></div></div>
+                  </li>
+                  <li>
+                    <p>jQuery <span>(25%)</span></p>
+                    <div class="progressbar pgb4"><div class="prg4"></div></div>
+                  </li>
+                  <li>
+                    <p>Adobe Photoshop/Illustration/Indesign <span>(80%)</span></p>
+                    <div class="progressbar pgb5"><div class="prg5"></div></div>
+                  </li>
+                </ul>
               </div>
-              <ul>
-                <li>
-                  <p>HTML5 <span>(75%)</span></p>
-                  <div class="progressbar pgb1"><div></div></div>
-                </li>
-                <li>
-                  <p>CSS <span>(75%)</span></p>
-                  <div class="progressbar pgb2"><div></div></div>
-                </li>
-                <li>
-                  <p>JavaScript <span>(25%)</span></p>
-                  <div class="progressbar pgb3"><div></div></div>
-                </li>
-                <li>
-                  <p>jQuery <span>(25%)</span></p>
-                  <div class="progressbar pgb4"><div></div></div>
-                </li>
-                <li>
-                  <p>Adobe Photoshop/Illustration/Indesign <span>(80%)</span></p>
-                  <div class="progressbar pgb5"><div></div></div>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
