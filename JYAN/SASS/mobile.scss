@@ -1,4 +1,204 @@
-/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-@media all and (max-width:767px) {
+/* reset */
+html {font-size: 10px;}
+html, body {width: 100%; height: 100%}
+body, header, nav, section, footer, h1, h2, h3, h4, h5, h6, p, span, div, ul, li, img, label, input, textarea {margin: 0; padding: 0; line-height: 1;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
 
+/* @ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@mixin clear {
+  &::after {display: block; content: ''; clear: both;}
 }
+@mixin transform50 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+/* PC layout */
+body {background: url(../img/bg_grid_tablet.png); font-family: 'Noto Sans KR', sans-serif; color: #666;}
+.scroll {overflow: hidden;}
+
+/* .side */
+.side {display: none;}
+
+/* #header */
+#header {position: relative; width: 100%; height: 50px; background: #fff; box-shadow: 10px 0 25px rgba(204, 204, 204, .25);
+  nav {z-index: 10; display: none; position: fixed; left: 0; width: 100%; height: 100%; background: #fff;
+    ul {@include transform50; text-align: center;
+      li {padding: 25px 0;
+        a {z-index: 11; display: inline-block; position: relative; font-size: 4rem; font-weight: 400;}
+        span {transition: all 0.2s; position: absolute; width: 40px; height: 40px; border-radius: 20px; background: rgba(242, 96, 82, 0);}
+        &:nth-of-type(1) {
+          span {left: -10px;}
+        }
+        &:nth-of-type(2) {
+          span {left: 37px;}
+        }
+        &:nth-of-type(3) {
+          span {left: 10px;}
+        }
+        &:hover {
+          span {background: rgba(242, 96, 82, .25);}
+        }
+      }
+    }
+  }
+  .menu-icon {position: absolute; top: 12.5px; left: 50px;
+    div {
+      .menu-ani {z-index: 20; display: block; position: relative; width: 25px; height: 25px;
+        span {display: block; position: absolute; top: 50%; transform: translateY(-50%); transition: all 0.5s; width: 100%; height: 3px; border-radius: 3px; background: rgba(37, 20, 26, 1); color: transparent;
+          &::before, &::after {content: ''; position: absolute; left: 0; transition: all 0.5s; width: 100%; height: 3px; background: rgba(37, 20, 26, 1);}
+          &::before {top: -9px;}
+          &::after {top: 9px;}
+        }
+      }
+      .on {
+        span {background: rgba(37, 20, 26, 0);
+          &::before {top: 0; transform: rotate(45deg);}
+          &::after {top: 0; transform: rotate(-45deg);}
+        }
+      }
+    }
+  }
+  .maintit {@include transform50;
+    h1 {font-weight: 600; color: #f26052;}
+  }
+}
+
+/* #contents */
+#contents {margin: 0 auto; width: 100%;}
+
+  /* .shortcut */
+  .shortcut {display: none;}
+
+  /* #about, #contact */
+  #about, #contact {position: relative; margin: 0 auto; padding-bottom: 30px; width: 668px;
+    .sec-tit {position: absolute; top: 30px; left: 50%; transform: translateX(-50%); text-align: center;
+      h2 {margin: 0 auto; font-size: 2rem; font-weight: 400; color: #f26052;}
+    }
+    .cont {padding: 50px 0 30px 0; background: #fff; box-shadow: 0 0 25px rgba(204, 204, 204, .25);
+      .wrap {margin: 0 auto; padding-top: 20px; width: 608px;
+
+      }
+    }
+  }
+  /* #intro */
+  #intro {
+    header {display: none;}
+    .cont {padding: 50px 0;
+      .wrap {text-align: center;
+        h2 {padding: 20px 0; font-size: 4.5rem; font-weight: 200; line-height: 60px;
+          strong {font-weight: 400;}
+        }
+        .mouse {position: relative; margin: 0 auto; width :20px; height: 35px; box-sizing: border-box; border: 2px solid #666; border-radius: 15px;
+           .scroller {position: absolute; top: 75%; left: 50%; transform: translate(-50%, -50%); width: 5px; height: 5px; border-radius: 8px; background-color: #f26052; animation-name: scroll; animation-duration: 1.2s; animation-timing-function: ease-out; animation-iteration-count: infinite;}
+           // animation
+           @keyframes scroll {
+             0% {top: 25%;}
+             100% {bottom: 25%;}
+           }
+        }
+      }
+    }
+  }
+
+  /* #about */
+  #about {
+    .cont {
+      .wrap {
+        > ul {@include clear;
+          > li {float: left; padding: 20px 0; text-align: center; background: rgba(242, 200, 196, .25);
+            .tit {padding-bottom: 20px;
+              div {height: 30px; padding-bottom: 10px;
+                img {vertical-align: middle;}
+              }
+              h3 {font-size: 1.8rem; font-weight: 400;}
+            }
+            p {font-size: 1.2rem; font-weight: 300; line-height: 20px;}
+          }
+          .profile, .certificates {width: 294px;}
+          .certificates {float: right;}
+          .skills {clear: both; margin-top: 20px; width: 100%;
+            > div {padding: 0 20px;}
+            ul {padding: 0;
+              li {position: relative; text-align: left;
+                p {position: absolute; left: 10px; top: 50%; transform: translateY(-50%); padding: 0; font-weight: 300; line-height: 1; color: #111;
+                  span {font-weight: 200;}
+                }
+                .progressbar {margin: 10px 0 20px 0; height: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(242, 200, 196, .5);
+                  div {height: 100%; background: #f2c8c4; border-radius: 10px;}
+                  .prg1, .skill1 {width: 75%;}
+                  .skill1 {animation: progress1 2s ease-out;}
+                  // animation
+                  @keyframes progress1 {
+                    0% {width: 0%;}
+                    100% {width: 75%;}
+                  }
+                  .prg2, .skill2 {width: 75%;}
+                  .skill2 {animation: progress2 2s ease-out;}
+                  // animation
+                  @keyframes progress2 {
+                    0% {width: 0%;}
+                    100% {width: 75%;}
+                  }
+                  .prg3, .skill3 {width: 25%;}
+                  .skill3 {animation: progress3 2s ease-out;}
+                  // animation
+                  @keyframes progress3 {
+                    0% {width: 0%;}
+                    100% {width: 25%;}
+                  }
+                  .prg4, .skill4 {width: 25%;}
+                  .skill4 {animation: progress4 2s ease-out;}
+                  // animation
+                  @keyframes progress4 {
+                    0% {width: 0%;}
+                    100% {width: 25%;}
+                  }
+                  .prg5, .skill5 {width: 80%;}
+                  .skill5 {animation: progress5 2s ease-out; margin-bottom: 0;}
+                  // animation
+                  @keyframes progress5 {
+                    0% {width: 0%;}
+                    100% {width: 80%;}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* #contact */
+  #contact {
+    .cont {
+      .wrap {
+        > div {padding: 20px; background: rgba(242, 242, 242, .5);
+          .tit {padding-bottom: 32.5px;
+            div {height: 30px; padding-bottom: 10px;
+              img {vertical-align: middle;}
+            }
+            h3 {font-size: 2.5rem; font-weight: 400;}
+          }
+          ul {
+            li {width: 100%; margin-bottom: 20px;
+              &:nth-of-type(3) {margin-bottom: 0;}
+              label {text-indent: 10px;
+                input, textarea {width: 100%; border: none; border-radius: 15px; box-shadow: 0 0 10px rgba(240, 240, 240, 1);
+                  &::placeholder {color: #999; text-indent: 10px;}
+                }
+                input {height: 30px;}
+                textarea {height: 200px; resize: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* footer */
+  footer {padding: 18.5px 0; text-align: center; background: #fff; box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25);
+    p {font-size: 1.3rem; font-weight: 200; color: #666;}
+  }

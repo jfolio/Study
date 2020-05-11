@@ -12,7 +12,7 @@ li { list-style: none; }
 
 /* @ */
 /* PC layout */
-body { position: relative; background: url(../img/bg_grid_tablet.png); font-family: 'Noto Sans KR', sans-serif; color: #666; }
+body { position: relative; background: url(../img/bg_grid.png); font-family: 'Noto Sans KR', sans-serif; color: #666; }
 
 .scroll { overflow: hidden; }
 
@@ -43,6 +43,7 @@ body { position: relative; background: url(../img/bg_grid_tablet.png); font-fami
 #header .menu-icon div .on span { background: rgba(37, 20, 26, 0); }
 #header .menu-icon div .on span::before { top: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 #header .menu-icon div .on span::after { top: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+#header > ul { display: none; }
 
 /* side-r */
 #contents { width: 100%; /* .shortcut */ /* #intro, #about, #contact */ /* intro */ /* about */ /* contact */ /* footer */ }
@@ -70,6 +71,7 @@ body { position: relative; background: url(../img/bg_grid_tablet.png); font-fami
 #contents #intro header ul li p { font-size: 1.4rem; font-weight: 300; line-height: 25px; }
 #contents #intro header ul li p strong { font-weight: 500; }
 #contents #intro .cont .wrap { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+#contents #intro .cont .wrap a { display: none; }
 #contents #intro .cont .wrap h2 { padding-bottom: 100px; font-size: 7.5rem; font-weight: 200; line-height: 90px; }
 #contents #intro .cont .wrap h2 strong { font-weight: 400; }
 #contents #intro .cont .wrap .mouse { position: relative; margin: 0 auto; width: 30px; height: 50px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #666; border-radius: 15px; }
@@ -145,5 +147,4 @@ body { position: relative; background: url(../img/bg_grid_tablet.png); font-fami
 #contents #contact .cont .wrap > div ul li label textarea { width: 100%; height: 200px; resize: none; }
 #contents footer { padding: 25px 0; text-align: center; background: #fff; -webkit-box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25); box-shadow: -10px 0 25px rgba(204, 204, 204, 0.25); }
 #contents footer p { font-size: 1.3rem; font-weight: 200; color: #666; }
-
-/*# sourceMappingURL=tablet.css.map */
+/*# sourceMappingURL=default.css.map */
