@@ -61,7 +61,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
       }
     }
   }
-  .maintlt {display: none;}
+  .maintit {display: none;}
 }
 
 /* side-r */
@@ -117,7 +117,7 @@ body {position: relative; background: url(../img/bg_grid.png); font-family: 'Not
     }
     .cont {position: absolute; top: 0; right: 0;
       .wrap {@include transform50; text-align: center;
-        a {display: none;}
+        img {display: none;}
         h2 {padding-bottom: 8.92%; font-size: 3.9063vw; font-weight: 200; line-height: 4.6875vw;
           strong {font-weight: 400;}
         }

@@ -43,7 +43,7 @@ body { position: relative; background: url(../img/bg_grid.png); font-family: 'No
 #header .menu-icon div .on span { background: rgba(37, 20, 26, 0); }
 #header .menu-icon div .on span::before { top: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 #header .menu-icon div .on span::after { top: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
-#header .maintlt { display: none; }
+#header .maintit { display: none; }
 
 /* side-r */
 #contents { width: 100%; /* .shortcut */ /* #intro, #about, #contact */ /* intro */ /* about */ /* contact */ /* footer */ }
@@ -73,7 +73,7 @@ body { position: relative; background: url(../img/bg_grid.png); font-family: 'No
 #contents #intro header ul li p strong { font-weight: 500; }
 #contents #intro .cont { position: absolute; top: 0; right: 0; }
 #contents #intro .cont .wrap { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
-#contents #intro .cont .wrap a { display: none; }
+#contents #intro .cont .wrap img { display: none; }
 #contents #intro .cont .wrap h2 { padding-bottom: 8.92%; font-size: 3.9063vw; font-weight: 200; line-height: 4.6875vw; }
 #contents #intro .cont .wrap h2 strong { font-weight: 400; }
 #contents #intro .cont .wrap .mouse { position: relative; margin: 0 auto; padding-bottom: 4.46%; width: 2.67%; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #666; border-radius: 15px; }
